@@ -61,7 +61,7 @@ class LearningAgent(Agent):
         #action = random.choice(self.env.valid_actions)
         Qmax, action  = self.getMaxQ(self.state)
         if random.random() < self.epsilon:
-            # Epsilon-Greedy Exploration: A semi-uniform randon exploration
+            # Epsilon-Greedy Exploration: A semi-uniform random exploration
             action = random.choice(self.env.valid_actions)
             Qmax = self.Q[(self.state,action)]
         immediate_reward = self.env.act(self, action)
